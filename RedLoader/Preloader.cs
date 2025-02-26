@@ -68,6 +68,11 @@ public static class Preloader
             // Logger.Log(LogLevel.Debug, $"Game executable path: {Paths.ExecutablePath}");
             // Logger.Log(LogLevel.Debug, $"Interop assembly directory: {Il2CppInteropManager.IL2CPPInteropAssemblyPath}");
             // Logger.Log(LogLevel.Debug, $"BepInEx root path: {Paths.BepInExRootPath}");
+
+            if (File.Exists(LoaderEnvironment.VortexFilePath))
+            {
+                RLog.Msg($"Mods are managed using Vortex Mod Manager.");
+            }
             
             RLog.Msg($"Running under Unity {UnityInfo.Version}");
             RLog.Msg($"Runtime version: {Environment.Version}");
