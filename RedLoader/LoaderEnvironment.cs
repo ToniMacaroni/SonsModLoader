@@ -32,6 +32,7 @@ public static class LoaderEnvironment
     public static string BlueprintDirectory => Path.Combine(GameRootDirectory, "Mods", "Blueprints");
     public static string LibsDirectory => Path.Combine(GameRootDirectory, "Libs");
     public static string UserDataDirectory { get; private set; }
+    public static string VortexFilePath => Path.Combine(GameRootDirectory, "vortex.deployment.json");
 
     /// <summary>
     /// Name of the executable without the extension
